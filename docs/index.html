@@ -1,0 +1,169 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dr. Adla Audi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #000;
+      color: #d4af37;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    img {
+      max-width: 100%;
+    }
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+      width: 90%;
+      max-width: 800px;
+      color: #d4af37;
+    }
+    table, th, td {
+      border: 1px solid #d4af37;
+      padding: 10px;
+    }
+    a {
+      color: #d4af37;
+      text-decoration: none;
+    }
+    .book-btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      border: 2px solid #d4af37;
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .currency-toggle {
+      margin: 30px;
+      font-size: 1.2em;
+    }
+    .footer {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      font-size: 1em;
+    }
+    .portrait {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
+    .description {
+      color: #f0d67c;
+      margin: 10px 30px;
+    }
+    .currency-option {
+      margin: 10px;
+      cursor: pointer;
+      display: inline-block;
+    }
+    .currency-option img {
+      width: 50px;
+      height: auto;
+    }
+    @media (max-width: 600px) {
+      .footer {
+        flex-direction: column;
+        gap: 15px;
+      }
+      table {
+        width: 95%;
+      }
+    }
+  </style>
+  <script>
+    function showPrices(currency) {
+      document.getElementById("usd-prices").style.display = currency === 'usd' ? 'block' : 'none';
+      document.getElementById("aed-prices").style.display = currency === 'aed' ? 'block' : 'none';
+    }
+  </script>
+</head>
+<body><img src="https://cdn.glitch.global/cdb0f440-fa9d-442e-a9c2-24f16b1213f7/IMG-20250506-WA0201-removebg-preview.png?v=1746571834694" alt="Adla Logo" width="150"><img class="portrait" src="https://cdn.glitch.global/cdb0f440-fa9d-442e-a9c2-24f16b1213f7/dr.adla_audi-20250507-0001.jpg?v=1746572716923" alt="Dr Adla Portrait">
+<h1>Dr. Adla Audi</h1>
+<p class="description">Dr. Adla Audi is a specialist in dermatology with extensive experience in skin treatments, aesthetics, and minimally invasive procedures.</p><div class="currency-toggle">
+  <p><strong>Please choose your currency to view prices:</strong></p>
+  <div>
+    <span class="currency-option" onclick="showPrices('aed')">
+      <img src="https://cdn.glitch.global/cdb0f440-fa9d-442e-a9c2-24f16b1213f7/Flag_of_the_United_Arab_Emirates.svg.png?v=1746571133591" alt="AED">
+      <div>AED</div>
+    </span>
+    <span class="currency-option" onclick="showPrices('usd')">
+      <img src="https://cdn.glitch.global/cdb0f440-fa9d-442e-a9c2-24f16b1213f7/Flag_of_the_United_States_(DoS_ECA_Color_Standard).svg.png?v=1746571139478" alt="USD">
+      <div>USD</div>
+    </span>
+  </div>
+</div><div id="aed-prices">
+  <h2>Price List (AED)</h2>
+  <table>
+    <tr><td>Botox</td><td>AED 500</td></tr>
+    <tr><td>Filler</td><td>AED 600/800</td></tr>
+    <tr><td>Threads</td><td>AED 400</td></tr>
+    <tr><td>Face lifting</td><td>AED 500</td></tr>
+    <tr><td>Skin booster</td><td>AED 600/800</td></tr>
+    <tr><td>Sculptra 10ml</td><td>AED 1800</td></tr>
+    <tr><td>Olidia 10ml</td><td>AED 1200</td></tr>
+    <tr><td>PRP</td><td>AED 250</td></tr>
+    <tr><td>MesoTherapy</td><td>AED 350</td></tr>
+    <tr><td>Meso injection</td><td>AED 400</td></tr>
+    <tr><td>Vampire</td><td>AED 500</td></tr>
+    <tr><td>Eye treatment</td><td>AED 600/800</td></tr>
+    <tr><td>Amber Injection</td><td>AED 1200</td></tr>
+    <tr><td>Whitening</td><td>AED 500</td></tr>
+    <tr><td>Facial Treatment</td><td>AED 200</td></tr>
+    <tr><td>Microneedling</td><td>AED 350</td></tr>
+    <tr><td>BioRepeel</td><td>AED 500/800/1000</td></tr>
+    <tr><td>Algae Peel</td><td>AED 500/800/1000</td></tr>
+    <tr><td>BB glow</td><td>AED 500</td></tr>
+    <tr><td>Lash Lifting</td><td>AED 200</td></tr>
+    <tr><td>Lamination</td><td>AED 200</td></tr>
+  </table>
+</div><div id="usd-prices" style="display:none">
+  <h2>Price List (USD)</h2>
+  <table>
+    <tr><td>Botox</td><td>$75</td></tr>
+    <tr><td>Filler</td><td>$75</td></tr>
+    <tr><td>Threads</td><td>$100</td></tr>
+    <tr><td>Face lifting</td><td>$75</td></tr>
+    <tr><td>Skin booster</td><td>$65</td></tr>
+    <tr><td>Sculptra 10 ml</td><td>$600</td></tr>
+    <tr><td>Olidia 10 ml</td><td>$400</td></tr>
+    <tr><td>PRP</td><td>$45</td></tr>
+    <tr><td>Mesotherapy</td><td>$35</td></tr>
+    <tr><td>Meso injection</td><td>$50</td></tr>
+    <tr><td>Vampire</td><td>$25</td></tr>
+    <tr><td>Eye treatment</td><td>$65</td></tr>
+    <tr><td>Amber injection</td><td>$300</td></tr>
+    <tr><td>Whitening</td><td>$65</td></tr>
+    <tr><td>Facial treatment</td><td>$25</td></tr>
+    <tr><td>Microneedling</td><td>$35</td></tr>
+    <tr><td>BioRepeel</td><td>$200</td></tr>
+    <tr><td>Algae Peel</td><td>$200</td></tr>
+    <tr><td>BB Glow</td><td>$35</td></tr>
+    <tr><td>Lash lifting</td><td>$15</td></tr>
+    <tr><td>Lamination</td><td>$15</td></tr>
+  </table>
+</div><h2>Our Services</h2>
+<p>Mesotherapy</p>
+<img src="https://cdn.glitch.global/cdb0f440-fa9d-442e-a9c2-24f16b1213f7/663ce31820c14a8c6962a93a_617037b15e3924aee1090e82_Mesotherapy-Facial-.webp?v=1746572377838" width="300">
+<p><a class="book-btn" href="https://wa.me/6176507070?text=أريد%20حجز%20موعد%20قريب%20لـ%20mesotherapy">Book now</a></p><p>Botox</p>
+<img src="https://cdn.glitch.global/cdb0f440-fa9d-442e-a9c2-24f16b1213f7/Botulinum-toxin.jpg?v=1746572524603" width="300">
+<p><a class="book-btn" href="https://wa.me/6176507070?text=أريد%20حجز%20موعد%20قريب%20لـ%20botox">Book now</a></p><p>Face lifting</p>
+<img src="https://cdn.glitch.global/cdb0f440-fa9d-442e-a9c2-24f16b1213f7/Minimally-Invasive-Face-Lifting-Options-image.jpg?v=1746572589077" width="300">
+<p><a class="book-btn" href="https://wa.me/6176507070?text=أريد%20حجز%20موعد%20قريب%20لـ%20face%20lifting">Book now</a></p><p>Skin booster</p>
+<img src="https://cdn.glitch.global/cdb0f440-fa9d-442e-a9c2-24f16b1213f7/1677657316skin-boosters.jpg?v=1746572607033" width="300">
+<p><a class="book-btn" href="https://wa.me/6176507070?text=أريد%20حجز%20موعد%20قريب%20لـ%20skin%20booster">Book now</a></p><div class="footer">
+  <a href="https://wa.me/6176507070">WhatsApp</a>
+  <a href="tel:+96176507070">Phone</a>
+  <a href="https://www.instagram.com/dr.adla_audi?igsh=MTNoYTZveDkyb3Jxbw==">Instagram</a>
+  <a href="https://maps.app.goo.gl/JrWbQhiPumsdfq9g6">Location</a>
+</div></body>
+</html>
